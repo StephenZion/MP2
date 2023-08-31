@@ -24,7 +24,7 @@ function Sample() {
                 className="me-1 "
                 aria-label="Search"
             />
-            <Button className='Search1' variant="outline-success">
+            <Button className='Search1' variant="outline-primary">
                 <FaSearch/>
                 </Button>
             </Form>

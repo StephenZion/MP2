@@ -6,7 +6,7 @@ import RingLoader from "react-spinners/RingLoader";
 import Footer from "./components/Footer";
 import Content from "./components/Content";
 
-function App(){
+const App = ()=> {
   const [loading, setloading] = useState(false)
   useEffect( () => {
     setloading(true)

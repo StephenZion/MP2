@@ -29,8 +29,8 @@ function NavScrollExample() {
 
             </Nav> 
             <Form className="d-flex">
-            <Button className='col-6 me-2 rounded-4' variant="outline-success">Sign in</Button>
-            <Button className='Sample1 col-6 rounded-4' variant="outline-success">Register</Button>
+            <Button className='sign1 col-6 me-2 rounded-4' variant="outline-grey">SIGN IN</Button>
+            <Button className='reg1 col-6 rounded-4' variant="outline-primary">REGISTER</Button>
             </Form>
         </Navbar.Collapse>
         </Container>
