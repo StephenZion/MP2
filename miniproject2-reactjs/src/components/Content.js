@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import adobo from './Images/adobo.jpg';
-import sinigang from './Images/Sinigang.jpg';
+// import sinigang from './Images/Sinigang.jpg';
 import papaitan from './Images/papaitan.jpg';
 
 const Content = () => {
