@@ -63,3 +63,16 @@
 h5{
     color:white
 }
+.search{
+    width: 100%;
+}
+.search-result{
+    width: 100%;
+    background-color: white;
+    margin-top: 10px;
+}
+.search-result div {
+    width: 100%;
+    padding: 10px 25px;
+    background-color: white;
+}

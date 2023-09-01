@@ -10,7 +10,7 @@ function Carousel1() {
     return (
     <Carousel data-bs-theme="dark">
         <Carousel.Item>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" onClick={() => window.location.href = 'https://www.google.com'} style={{cursor: 'pointer'}}>
         <img
             className=" caro d-block w-50"
             src={adoboImage}
@@ -24,7 +24,7 @@ function Carousel1() {
         </Carousel.Item>
 
         <Carousel.Item>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" onClick={() => window.location.href = 'https://www.google.com'} style={{cursor: 'pointer'}}>
         <img
             className="caro d-block w-50"
             src={sinigangImage}
@@ -38,7 +38,7 @@ function Carousel1() {
         </Carousel.Item>
 
         <Carousel.Item>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" onClick={() => window.location.href = 'https://www.google.com'} style={{cursor: 'pointer'}}>
         <img
             className="caro d-block w-50"
             src={papaitanImage}
@@ -52,7 +52,7 @@ function Carousel1() {
         </Carousel.Item>
 
         <Carousel.Item>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" onClick={() => window.location.href = 'https://www.google.com'} style={{cursor: 'pointer'}}>
         <img
             className=" caro d-block w-50"
             src={kalderetaImage}
@@ -66,7 +66,7 @@ function Carousel1() {
         </Carousel.Item>
 
         <Carousel.Item>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center" onClick={() => window.location.href = 'https://www.google.com'} style={{cursor: 'pointer'}}>
         <img
             className=" caro d-block w-50"
             src={sisigImage}

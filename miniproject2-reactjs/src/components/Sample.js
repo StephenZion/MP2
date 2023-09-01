@@ -7,8 +7,36 @@ import Nav from 'react-bootstrap/Nav';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import { FaSearch } from 'react-icons/fa'
 import './Sample.css';
+import { useEffect, useState } from 'react';
 
 function Sample() {
+    useEffect(()=>{
+        fetch('http://localhost:4000/search')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setFilterData(data);
+        })
+        .catch(err => console.log(err));
+    },[])
+    const [data, setData] = useState([])
+    const [filterData, setFilterData] = useState([])
+    const handleFilter = (value) =>{
+        const res = filterData.filter(f => f.name.toLowerCase().includes(value))
+        setData(res);
+        if(value === "") {
+            setData([])
+        }
+    }
+
+    const handleSearch = () => {
+        // Implement your search logic here
+        // For example, you can navigate to a search results page
+        // or perform an AJAX request to fetch search results
+        // This is just a placeholder function
+        alert('Search button clicked');
+    }
+
     return (
         <Container fluid>
             <Nav
@@ -18,17 +46,30 @@ function Sample() {
             </Nav>
             <div className="d-flex justify-content-center">
             <Form className="d-flex col-8 p-2">
-            <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-1 "
-                aria-label="Search"
-            />
-            <Button className='Search1' variant="outline-primary">
+            <div className='search'>
+                <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-1 "
+                    aria-label="Search"
+                    onChange={e => handleFilter(e.target.value)}
+            /> 
+                <div className='search-result' onClick={() => window.location.href = 'https://www.google.com'} style={{cursor:'pointer'}}>
+                {data.map((d, i) => (
+                    <div key={i}> 
+                        {d.name}
+                    </div>
+                ))}
+                
+                </div>
+            </div>
+            <div>
+            <Button className='Search1' variant="outline-primary" onClick={handleSearch} >
                 <FaSearch/>
                 </Button>
+                </div>
             </Form>
-        </div>
+            </div>
         </Container>
     );
 }
